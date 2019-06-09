@@ -1,0 +1,152 @@
+<DOCTYPE html>
+    <html xmlns="https://www.w3.org/1999/xhtml">
+
+    <head>
+        <title>Players App</title>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+        <script type="text/javascript" src="/javascripts/my.js"></script>
+        <link rel="stylesheet" href="stylesheets/style.css">
+        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="../node_modules/css/blue.min.css" />
+	<link rel="stylesheet" href="../node_modules/css/jquery.mobile.icons.min.css" />
+        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-url-parser/2.3.1/purl.js"></script>
+    </head>
+
+    <body>
+
+        <div data-role="page" id="home">
+
+            <div data-theme="a" data-role="header">
+                <h3>The Players App</h3>
+                <h4>Home Page</h4>
+
+            </div>
+
+            <div data-role="content">
+
+                <div>
+                    <ul data-role="listview" data-autodividers="true" data-theme="c" id="Players"></ul>
+                </div>
+
+                <br />
+                <a href="#addpage" class="ui-btn" data-transition="flip">Go to Add Players</a>
+                <br />
+                <h5>To delete a Player, copy the Player name then paste after clicking next link.</h5>
+                <a href="#deletepage" class="ui-btn" data-transition="flip">Go to Delete Page</a>
+            </div>
+
+            <div data-role="footer">
+                <h1>ShiZhao and Angelina node.js project</h1>
+            </div>
+
+        </div>
+
+
+        <div data-role="page" id="details-page">
+            <div data-theme="a" data-role="header">
+                <h3>The Players App</h3>
+                <h4>Details Page: Type Player Name to update it !</h4>
+                <h1>Warning: You old data will be deleted when you click on the update button.</h1>
+                <input type="text" id="deletePlayerName" size="25" />
+                <input type="button" value="update" onclick="deletePlayer2();" />
+                <a href="#home" class="ui-btn-left">Back</a>
+            </div>
+
+            <div data-role="content">
+
+                <p id="detailParmHere" hidden>change1</p>
+                <p id="showdata">change2</p>
+            </div>
+
+            <div data-role="footer">
+                <h1>ShiZhao and Angelina node.js project</h1>
+            </div>
+        </div>
+
+
+        <div data-role="page" id="addpage" data-theme="c">
+            <div data-role="header">
+                <h3>The Players App</h3>
+                <h4>Add Players</h4>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <div>
+                    <h2>Add a new Players</h2>
+                    Player Name: <input type="text" id="newPlayerName" size="25" /> <br />
+                    Gender: <input type="text" id="newGender" size="10" /> <br />
+                    Age: <input type="text" id="newAge" size="5" /> <br />
+                    Game Like to Play: <input type="text" id="newGameLiketoPlay" size="120" /> <br />
+                    Anime Like to Watch: <input type="text" id="newAnimeLiketoWatch" size="120" /> <br />
+                    Gaming life: <input type="text" id="newGaminglife" size="120" /> <br />
+                    Anime Life: <input type="text" id="newAnimeLife" size="120" /> <br />
+                    <input type="button" value="Add New" onclick="addPlayer();" />
+                </div>
+
+
+                <a href="#home" class="ui-btn" data-transition="flip" data-rel="back">Go Back</a>
+
+            </div>
+
+            <div data-role="footer">
+                <h1>ShiZhao and Angelina node.js project</h1>
+            </div>
+        </div>
+
+
+
+        <div data-role="page" id="deletepage" data-theme="d">
+            <div data-role="header">
+                <h3>The Players App</h3>
+                <h4>Delete Page</h4>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <div>
+                    <h2>Delete a Player by their Name</h2>
+                    <input type="text" id="deletePlayerName" size="25" />
+                    <input type="button" value="Delete" onclick="deletePlayer();" />
+                </div>
+
+                <a href="#home" class="ui-btn" data-transition="flip" data-rel="back">Go Back</a>
+
+            </div>
+
+            <div data-role="footer">
+                <h1>ShiZhao and Angelina node.js project</h1>
+            </div>
+        </div>
+
+        <div data-role="page" id="uppage" data-theme="e">
+            <div data-role="header">
+                <h3>The Players App</h3>
+                <h4>Update Players Information</h4>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <div>
+                    <h2>You old information is not in cloud anymore</h2>
+                    <h1>So you have to finish this form </h1>
+                    Player Name: <input type="text" id="upPlayerName" size="25" /> <br />
+                    Gender: <input type="text" id="upGender" size="10" /> <br />
+                    Age: <input type="text" id="upAge" size="5" /> <br />
+                    Game Like to Play: <input type="text" id="upGameLiketoPlay" size="120" /> <br />
+                    Anime Like to Watch: <input type="text" id="upAnimeLiketoWatch" size="120" /> <br />
+                    Gaming life: <input type="text" id="upGaminglife" size="120" /> <br />
+                    Anime Life: <input type="text" id="upAnimeLife" size="120" /> <br />
+                    <input type="button" value="Update" onclick="upPlayer();" />
+                </div>
+
+
+            </div>
+
+            <div data-role="footer">
+                <h1>ShiZhao and Angelina node.js project</h1>
+            </div>
+        </div>
+
+
+    </body>
+
+    </html>
